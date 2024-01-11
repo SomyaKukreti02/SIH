@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static\styles.css">
+    <link rel="icon" href="static\favicon.ico" type="x-icon">
+    <title>Quick_care</title>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="static\favicon.ico" alt="Mylogo">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Contact Us</a></li>
+            <li class="item"><a href="#client-section">About Us</a></li>
+            <li class="item"><a href="#contact">FAQ's</a></li>
+            <li id= "login" class="item"><a href="Schemes.html">Login/Register</a></li>
+            
+        </ul>
+    </nav>
+
+    <div class="whole">
+        <div class="left">
+            {% set my_list = history %}
+    
+            {% for item in my_list %}
+             <p >  {{ item }} </p>
+            {% endfor %}
+        </div>
+        <div class="right">
+            <form id="form" class="search" method="POST">
+                <!-- <label id="label" class="searchbar"><h1>Enter your prompt here:</h1></label> -->
+                <input
+                  id="text"
+                  name="text"
+                  required
+                  placeholder="Enter Your Prompt here"
+                />
+                <input type="submit" />
+                <div id="output">
+                  <table>
+                    <tr>
+                        <th>Entity</th>
+                        <th>Category</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                    </tr>
+                
+                    {% for entry in output%}
+                    <tr>
+                        {% set parts = entry.split(',') %}
+                        <td>{{ parts[0] }}</td>
+                        <td>{{ parts[1] }}</td>
+                        <td>{{ parts[2] }}</td>
+                        <td>{{ parts[3] }}</td>
+                    </tr>
+                    {% endfor %}
+                    </table>
+                </div>
+            
+          </form>
+        </div>
+    </div>
+    
+
+   
+
+        
+
+
+      
+
+        
+   
+
+
+    <!-- What is the rainfall in INdi -->
+    
+    <footer>
+        <div class="center">
+            Copyright &copy;Team Quick_care All rights reserved!
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

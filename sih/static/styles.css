@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:10px;
+    left:0px;
+    height: 70%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#logo{
+    margin: 7px 20px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;    
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}    
+
+
+body{
+    width:100vw;
+    height:100vh;
+    background-size: 100% 100%;
+    animation: bg 24s ease-in infinite running;
+    /* background-image: url(images/img12.jpeg); */
+}
+
+@keyframes bg{
+    0%{
+        background-image: url(images/img12.jpeg);
+    }
+    20%{
+        background-image: url(images/img2.jpeg);
+    }
+    40%{
+        background-image: url(images/img3.jpeg);
+    }
+    60%{
+        background-image: url(images/img9.jpeg);
+    }
+    80%{
+        background-image: url(images/img11.jpg);
+    }
+    100%{
+        background-image: url(images/img1.jpeg);
+    }
+}
+
+footer{
+    background: black;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+      
+
+}
+
+.formclass{
+    /* text-align: center; */
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 10%;
+    
+}
+input[type="submit"]{
+    background-color:#acd7c8;   
+    color: rgb(0, 0, 0);
+    padding:12px;
+    width: 100px;
+    border: none;
+    border-radius: 2px;
+    font-family: sans-serif;
+    cursor:pointer;
+    border-radius: 20px;
+    font-size: 17px;
+    /* width:50%; */
+}
+input[type="submit"]:hover{
+    background-color: #3b876e;
+    color:white;
+}
+
+input[name="text"]{
+    
+    width:450px;
+    padding:13px;
+    border: 2px solid rgb(0, 0, 0);
+    margin:5px;
+    border-radius: 13px;
+}
+label{
+    color: white;
+}
+
+.search{
+    position: absolute;
+    margin-top: 12%;
+    margin-left: 10%;
+    margin-top: 20px;
+    height:300px;
+    font-size: xx-large;
+
+
+}
+.searchbar{
+    width: 50%;
+    height: 50%;
+}
+#login{
+    position: absolute;
+    margin-left: 75%;
+}
+#output{
+    align-items: center;
+
+    display: inline-block;
+    color:white;
+    position: relative;
+    margin-top: 50px;
+    /* text-align: center; */
+    margin-left:40%;
+    font-size: 20px;
+    /* text-shadow: 0 0 3px #000000, 0 0 5px #000000 */
+}
+#outputmatch{
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 1.5s steps(30,end) forwards; 
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+.whole{
+    display:flex;
+    /* justify-content: center; */
+
+}
+.right{
+    width:70%;
+    display: flex;
+    align-items: center;
+    /* background-color: #000000; */
+    /* align-items: center; */
+    height: 700px;
+}
+.left{
+    width: 30%;
+    font-size: 30px;
+    
+    color:white;
+    text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+    padding:120px;
+    padding-left: 50px;
+    padding-right: 0;
+    /* display: inline-block; */
+    /* align-items: center; */
+}
+.left p{
+    padding-left:10px;
+    font-size: 25px;
+}
+table {
+    position: relative;
+    right:300px;
+    border-collapse: collapse;
+    width: 100%;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+th{
+    color:rgb(0, 0, 0);
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 6s steps(60) 2s forwards;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-size: 15px;
+    
+}
+td{
+    font-size: 18px;
+    text-shadow: 0 0 3px #000000, 0 0 5px #000000
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: max-content;
+    }
+}
+tr, th{
+    border: none;
+}
+
